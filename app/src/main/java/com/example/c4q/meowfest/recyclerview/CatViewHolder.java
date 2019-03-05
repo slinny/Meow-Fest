@@ -29,7 +29,6 @@ public class CatViewHolder extends RecyclerView.ViewHolder {
         catTime = itemView.findViewById(R.id.time_textview);
     }
 
-
     public void onBind(CatImage response) {
         Picasso.get().load(response.getImageUrl()).into(catImage);
         catTitle.setText(response.getTitle());
