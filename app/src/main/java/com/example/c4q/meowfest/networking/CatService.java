@@ -8,6 +8,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface CatService {
-    @GET("api/cats?page=0")
+    @GET("/api/cats?page=0")
     Call<List<CatImage>> getCatImageList();
 }

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.c4q.meowfest.model.CatImage;
 import com.example.c4q.meowfest.networking.CatService;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<CatImage>> call, Response<List<CatImage>> response) {
                 catImageList= response.body();
+                Log.d("retrofit response", catImageList.toString());
                 catAdapter = new CatAdapter(catImageList);
                 catRecyclerView.setAdapter(catAdapter);
             }
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
+
+//        catAdapter = new CatAdapter(catImageList);
+//        catRecyclerView.setAdapter(catAdapter);
 
         linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         catRecyclerView.setLayoutManager(linearLayoutManager);
