@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.example.c4q.meowfest.model.CatImage;
+import com.example.c4q.meowfest.models.CatImage;
 import com.example.c4q.meowfest.networking.CatService;
 import com.example.c4q.meowfest.networking.RetrofitCall;
 import com.example.c4q.meowfest.recyclerview.CatAdapter;

@@ -1,4 +1,4 @@
-package com.example.c4q.meowfest.model;
+package com.example.c4q.meowfest.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

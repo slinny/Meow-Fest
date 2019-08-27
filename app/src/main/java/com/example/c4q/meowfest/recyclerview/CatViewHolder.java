@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.c4q.meowfest.R;
-import com.example.c4q.meowfest.model.CatImage;
+import com.example.c4q.meowfest.models.CatImage;
 import com.squareup.picasso.Picasso;
 
 public class CatViewHolder extends RecyclerView.ViewHolder {
