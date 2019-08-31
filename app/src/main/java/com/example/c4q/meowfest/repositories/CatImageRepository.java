@@ -2,6 +2,7 @@ package com.example.c4q.meowfest.repositories;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
+import android.util.Log;
 
 import com.example.c4q.meowfest.networking.CatService;
 import com.example.c4q.meowfest.networking.RetrofitCall;
@@ -25,6 +26,8 @@ public class CatImageRepository {
 
                     @Override
                     public void onResponse(Call<CatImageResponse> call, Response<CatImageResponse> response) {
+
+                        Log.d("CAP", "onResponse response:: " + response);
 
                         if (response.body() != null) {
                             data.setValue(response.body());

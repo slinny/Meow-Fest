@@ -7,23 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import com.example.c4q.meowfest.models.CatImage;
 import com.example.c4q.meowfest.networking.CatService;
-import com.example.c4q.meowfest.networking.RetrofitCall;
 import com.example.c4q.meowfest.recyclerview.CatAdapter;
 import com.example.c4q.meowfest.response.CatImageResponse;
 import com.example.c4q.meowfest.viewmodel.CatImageViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         catRecyclerView.setHasFixedSize(true);
 
         // adapter
-        catAdapter = new CatAdapter(catImageList);
+        catAdapter = new CatAdapter(MainActivity.this,catImageList);
         catRecyclerView.setAdapter(catAdapter);
 
         // View Model

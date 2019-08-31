@@ -1,5 +1,7 @@
 package com.example.c4q.meowfest.recyclerview;
 
+import android.content.Context;
+import android.print.PrinterId;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,8 +16,10 @@ import java.util.List;
 public class CatAdapter extends RecyclerView.Adapter<CatViewHolder>{
 
     private List<CatImage> catImageList;
+    private Context context;
 
-    public CatAdapter(List<CatImage> catImageList) {
+    public CatAdapter(Context context, List<CatImage> catImageList) {
+        this.context = context;
         this.catImageList = catImageList;
     }
 
